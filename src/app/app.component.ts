@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angPipe';
+  today = new Date();
+  users = [
+    { name: 'Dennis', age: 21 },
+    { name: 'Matt', age: 33 },
+    { name: 'Adam', age: 21 }
+  ];
+  onClickAdd() {
+    this.users = [...this.users, { name: 'Ben', age: 26 }];
+  }
 }
